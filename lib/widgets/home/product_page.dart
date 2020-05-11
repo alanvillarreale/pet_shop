@@ -1,8 +1,6 @@
 
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:project_ecommerce/app_properties.dart';
-
 import 'package:project_ecommerce/models/product.dart';
 import 'package:project_ecommerce/pages/view_product_page.dart';
 import 'package:project_ecommerce/widgets/product/product_display.dart';
