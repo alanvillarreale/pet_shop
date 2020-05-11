@@ -1,12 +1,10 @@
-
-
 import 'package:flutter/material.dart';
 import 'package:project_ecommerce/app_properties.dart';
 import 'package:project_ecommerce/pages/intro_page.dart';
 
 import 'register_page.dart';
 
-class                            WelcomeBackPage extends StatefulWidget {
+class WelcomeBackPage extends StatefulWidget {
   @override
   _WelcomeBackPageState createState() => _WelcomeBackPageState();
 }
@@ -34,79 +32,76 @@ class _WelcomeBackPageState extends State<WelcomeBackPage> {
           ]),
     );
 
-  
-
-    Widget loginButton =  InkWell(
-        onTap: () {
-          Navigator.of(context)
-              .push(MaterialPageRoute(builder: (_) => IntroPage()));
-        },
-        child: Container(
-          width: MediaQuery.of(context).size.width,
-          height: 50,
-          padding: EdgeInsets.all(10),
-          child: Center(
-              child: new Text("Iniciar Sesión",
-                  style: const TextStyle(
-                      color: const Color(0xfffefefe),
-                      fontWeight: FontWeight.w600,
-                      fontStyle: FontStyle.normal,
-                      fontSize: 20.0))),
-          decoration: BoxDecoration(
-              gradient: LinearGradient(
-                  colors: [
-                    Color.fromRGBO(236, 60, 3, 1),
-                    Color.fromRGBO(234, 60, 3, 1),
-                    Color.fromRGBO(216, 78, 16, 1),
-                  ],
-                  begin: FractionalOffset.topCenter,
-                  end: FractionalOffset.bottomCenter),
-              boxShadow: [
-                BoxShadow(
-                  color: Color.fromRGBO(0, 0, 0, 0.16),
-                  offset: Offset(0, 5),
-                  blurRadius: 10.0,
-                )
-              ],
-              borderRadius: BorderRadius.circular(9.0)),
-        ),
-      );
+    Widget loginButton = InkWell(
+      onTap: () {
+        Navigator.of(context)
+            .push(MaterialPageRoute(builder: (_) => IntroPage()));
+      },
+      child: Container(
+        width: MediaQuery.of(context).size.width,
+        height: 50,
+        padding: EdgeInsets.all(10),
+        child: Center(
+            child: new Text("Iniciar Sesión",
+                style: const TextStyle(
+                    color: const Color(0xfffefefe),
+                    fontWeight: FontWeight.w600,
+                    fontStyle: FontStyle.normal,
+                    fontSize: 20.0))),
+        decoration: BoxDecoration(
+            gradient: LinearGradient(
+                colors: [
+                  Color.fromRGBO(236, 60, 3, 1),
+                  Color.fromRGBO(234, 60, 3, 1),
+                  Color.fromRGBO(216, 78, 16, 1),
+                ],
+                begin: FractionalOffset.topCenter,
+                end: FractionalOffset.bottomCenter),
+            boxShadow: [
+              BoxShadow(
+                color: Color.fromRGBO(0, 0, 0, 0.16),
+                offset: Offset(0, 5),
+                blurRadius: 10.0,
+              )
+            ],
+            borderRadius: BorderRadius.circular(9.0)),
+      ),
+    );
 
     Widget loginForm = Container(
-            height:300,
-            width: MediaQuery.of(context).size.width,
-            padding: const EdgeInsets.all(40),
-            decoration: BoxDecoration(
-                color: Color.fromRGBO(255, 255, 255, 0.8),
-                borderRadius: BorderRadius.all( Radius.circular(10))),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: <Widget>[
-                Padding(
-                  padding: const EdgeInsets.only(top: 8.0),
-                  child: TextField(
-                    decoration: InputDecoration(
-                      hintText: 'Ej: correo@gmail.com',
-                    ),
-                    style: TextStyle(fontSize: 16.0),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(top: 8.0),
-                  child: TextField(
-                    controller: password,
-                    style: TextStyle(fontSize: 16.0),
-                    obscureText: true,
-                  ),
-                ),
-                Container(
-                  padding: EdgeInsets.only(top: 30),
-                  child: loginButton,
-                )
-                 
-              ],
+      height: 300,
+      width: MediaQuery.of(context).size.width,
+      padding: const EdgeInsets.all(40),
+      decoration: BoxDecoration(
+          color: Color.fromRGBO(255, 255, 255, 0.8),
+          borderRadius: BorderRadius.all(Radius.circular(10))),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: <Widget>[
+          Padding(
+            padding: const EdgeInsets.only(top: 8.0),
+            child: TextField(
+              decoration: InputDecoration(
+                hintText: 'Ej: correo@gmail.com',
+              ),
+              style: TextStyle(fontSize: 16.0),
             ),
-          );
+          ),
+          Padding(
+            padding: const EdgeInsets.only(top: 8.0),
+            child: TextField(
+              controller: password,
+              style: TextStyle(fontSize: 16.0),
+              obscureText: true,
+            ),
+          ),
+          Container(
+            padding: EdgeInsets.only(top: 30),
+            child: loginButton,
+          )
+        ],
+      ),
+    );
 
     Widget forgotPassword = Padding(
       padding: const EdgeInsets.only(bottom: 20),
@@ -124,7 +119,7 @@ class _WelcomeBackPageState extends State<WelcomeBackPage> {
           InkWell(
             onTap: () {
               Navigator.of(context)
-              .push(MaterialPageRoute(builder: (_) => RegisterPage()));
+                  .push(MaterialPageRoute(builder: (_) => RegisterPage()));
             },
             child: Text(
               'Regístrate',
@@ -140,20 +135,17 @@ class _WelcomeBackPageState extends State<WelcomeBackPage> {
     );
 
     return Scaffold(
-
       body: Stack(
         children: <Widget>[
-
           Container(
             decoration: BoxDecoration(
-              image: DecorationImage(image: AssetImage('assets/bg_auth.jpg'),
-                  fit: BoxFit.cover)
-            ),
+                image: DecorationImage(
+                    image: AssetImage('assets/bg_auth.jpg'),
+                    fit: BoxFit.cover)),
           ),
           Container(
             decoration: BoxDecoration(
-                color: transparentYellow,
-
+              color: transparentYellow,
             ),
           ),
           Padding(
@@ -164,7 +156,6 @@ class _WelcomeBackPageState extends State<WelcomeBackPage> {
                 Spacer(flex: 3),
                 welcomeBack,
                 Spacer(),
-                
                 Spacer(flex: 2),
                 loginForm,
                 Spacer(flex: 2),
